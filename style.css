@@ -1,0 +1,165 @@
+*{ 
+ padding:0;
+ margin:0;
+ box-sizing: border-box;
+}
+
+body {
+ background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+ background-size: 400% 400%;
+ animation: gradient 15s ease infinite;
+ height: 100vh;
+}
+
+@keyframes gradient {
+ 0% {
+  background-position: 0% 50%;
+ }
+ 50% {
+  background-position: 100% 50%;
+ }
+ 100% {
+  background-position: 0% 50%;
+ }
+}
+
+
+/* MAIN BODY */
+.wrapper {
+ width: 90%;
+ height: 800px;
+ position: relative;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background-color: #fff;
+ border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ -ms-border-radius: 5px;
+ -o-border-radius: 5px;
+ font-family: system-ui,
+ -apple-system,
+ "Segoe UI";
+}
+
+.form-container {
+ width: 90%;
+ height: 100%;
+ position: relative;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+}
+
+.heading h1 {
+ font-size: 3rem;
+ text-align: center;
+ padding: 2rem 0 2rem 0;
+}
+
+
+/* FORM STYLING */
+form {
+ font-size: 1.125rem;
+}
+
+label {
+ display: inline-block;
+ width: 100%;
+ text-align: left;
+}
+
+input {
+ height: 35px;       
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+ width: 100%;
+ padding-left:5px;
+ font-size: 1.125rem;
+ line-height: 1.25em;
+}
+
+input[type="submit"] {
+ width: 180px;
+ height: 50px;
+ border-radius: 0;
+ border: thin solid rgb(143, 143, 143);
+ margin-top: 2rem;
+ font-size: 1.25rem;
+ color: rgb(123, 122, 122);
+}
+
+
+/* TOGGLE SWITCH */
+.toggle {
+ text-align: center;
+ margin-top: 20px;
+ font-size: 1.1rem;
+}
+
+.switch {
+ position: relative;
+ display: inline-block;
+ width: 48px;
+ height: 24px;
+ margin: 0px;
+}
+
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+.slider.round {
+ border-radius: 34px;
+}
+
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #ccc;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+.slider.round:before {
+ border-radius: 50%;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 20px;
+ width: 20px;
+ bottom: 2px;
+ left: 2px;
+ background-color: white;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+input:checked+.slider {
+ background-color: rgb(182, 0, 182);
+}
+
+input:focus+.slider {
+ box-shadow: 0 0 1px rgb(182, 0, 182);
+}
+
+input:checked+.slider:before {
+ transform: translateX(24px);
+ -webkit-transform: translateX(24px);
+ -moz-transform: translateX(24px);
+ -ms-transform: translateX(24px);
+ -o-transform: translateX(24px);
+}
